@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+/* Palet diambil dari hasil desa: daun pakcoy, pucuk muda, bunga telang, pepaya matang. */
+@theme {
+  --color-kertas: #f4f7ee;
+  --color-tinta: #17261c;
+  --color-redup: #56675b;
+  --color-garis: #d3dcc8;
+  --color-daun: #1e5a3a;
+  --color-daun-tua: #113a25;
+  --color-daun-muda: #e2eed8;
+  --color-pucuk: #b9dc5f;
+  --color-telang: #3f3d9e;
+  --color-telang-muda: #e7e7f8;
+  --color-pepaya: #f08a24;
+  --color-pepaya-tua: #944700;
+  --color-pepaya-muda: #fdecd8;
+  --color-merah: #b3261e;
+  --color-merah-muda: #fbe5e3;
+}
+
+@theme inline {
+  --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
+}
+
+body {
+  background: var(--color-kertas);
+  color: var(--color-tinta);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-telang);
+  outline-offset: 2px;
+}
+
+@layer components {
+  .inp {
+    @apply w-full rounded-md border border-garis bg-white px-3 py-2 text-base text-tinta placeholder:text-redup/70 disabled:bg-kertas;
+  }
+  .tbl {
+    @apply w-full text-left text-sm;
+  }
+  .tbl th {
+    @apply border-b border-garis px-3 py-2 font-semibold whitespace-nowrap text-redup;
+  }
+  .tbl td {
+    @apply border-b border-garis/60 px-3 py-2.5 align-top;
+  }
+  .tbl tr:last-child td {
+    @apply border-b-0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
