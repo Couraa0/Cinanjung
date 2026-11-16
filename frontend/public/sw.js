@@ -19,9 +19,10 @@ self.addEventListener("fetch", (event) => {
   const url = new URL(req.url);
   if (req.method !== "GET" || url.origin !== self.location.origin) return;
 
-  // Aset dengan nama ber-hash tidak pernah berubah: ambil dari cache dulu.
+  // Hanya aset Next.js yang namanya ber-hash yang tidak pernah berubah: ambil dari cache dulu.
+  // File di public/ (ikon, gambar produk) bisa berganti isi dengan nama yang sama, jadi ikut jaringan dulu.
   // Halaman dan data: jaringan dulu supaya selalu baru, cache dipakai hanya saat offline.
-  const immutable = url.pathname.startsWith("/_next/static/") || /\.(png|svg|ico|woff2)$/.test(url.pathname);
+  const immutable = url.pathname.startsWith("/_next/static/");
 
   event.respondWith(
     (async () => {

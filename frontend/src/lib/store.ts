@@ -6,7 +6,8 @@ import { useEffect, useState, useSyncExternalStore, type FormEvent } from "react
 import { seed } from "./seed";
 import type { Db, User } from "./types";
 
-const KEY = "cinanjung-db-v1";
+// Naikkan versi saat data contoh berubah, supaya browser lama memuat data contoh yang baru.
+const KEY = "cinanjung-db-v2";
 let db: Db | null = null;
 const listeners = new Set<() => void>();
 const notify = () => listeners.forEach((l) => l());

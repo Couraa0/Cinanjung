@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <title>Ilustrasi selada hidroponik</title>
+  <rect width="800" height="600" fill="#e2eed8"/>
+  <circle cx="130" cy="110" r="140" fill="#d3e6c4"/>
+  <ellipse cx="400" cy="512" rx="280" ry="30" fill="#c3d8b0"/>
+  <!-- netpot dan akar -->
+  <path d="M340 400h120l-14 70h-92Z" fill="#3a3a3a"/>
+  <g stroke="#f2ead2" stroke-width="4" stroke-linecap="round" fill="none">
+    <path d="M370 470c-4 14 2 24-4 36M392 470c2 16-4 26 2 38M412 470c4 12-2 22 4 34M432 470c-2 12 4 22-2 32"/>
+  </g>
+  <!-- daun selada, dari luar ke dalam -->
+  <path d="M400 410C250 420 170 350 196 270 214 214 280 210 300 250 300 180 360 150 400 180 440 150 500 180 500 250 520 210 586 214 604 270 630 350 550 420 400 410Z" fill="#5fa548"/>
+  <path d="M400 400C290 400 240 340 262 290 280 252 320 260 330 290 334 230 370 214 400 236 430 214 466 230 470 290 480 260 520 252 538 290 560 340 510 400 400 400Z" fill="#7cc15a"/>
+  <path d="M400 392C330 390 300 350 316 316 330 290 356 300 360 320 366 280 384 270 400 286 416 270 434 280 440 320 444 300 470 290 484 316 500 350 470 390 400 392Z" fill="#a6d97a"/>
+  <path d="M400 392V250M400 360L330 300M400 360l70-60M400 380L300 340M400 380l100-40" stroke="#d9efbf" stroke-width="5" stroke-linecap="round" fill="none"/>
+  <path d="M196 270c10 10 4 24 16 32M604 270c-10 10-4 24-16 32" stroke="#4a8a38" stroke-width="5" fill="none" stroke-linecap="round"/>
+</svg>

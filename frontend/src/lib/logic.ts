@@ -260,6 +260,9 @@ export function simulateTick(d: Db, deviceId: string, scenario: Scenario, nowMs:
 
 // ---------- Panen: HARVESTED → PENDING_REVIEW → APPROVED → PUBLISHED ----------
 
+// ponytail: gambar ilustrasi bawaan untuk produk dari panen. Hapus saat foto produk asli diunggah lewat backend.
+const CROP_IMAGE: Record<string, string> = { pakcoy: "/produk/pakcoy.svg", selada: "/produk/selada.svg" };
+
 export function recordHarvest(
   d: Db,
   h: { batchId: string; harvestDate: string; quantity: number; unit: string; qualityNote: string; closeBatch?: boolean },
@@ -323,7 +326,7 @@ export function harvestToCatalog(d: Db, harvestId: string, producerId: string, a
       unit: h.unit,
       stock: 0,
       status: "DRAFT",
-      imageUrl: "",
+      imageUrl: CROP_IMAGE[b.cropName.trim().toLowerCase()] ?? "",
       harvestId: h.id,
     };
     d.products.push(p);

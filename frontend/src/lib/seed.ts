@@ -26,12 +26,12 @@ export function seed(now = Date.now()): Db {
   });
 
   const products: Product[] = [
-    { id: "P-PAKCOY", producerId: "PR-KWT", categoryId: "C-HIDRO", name: "Pakcoy Hidroponik", description: "Pakcoy segar dari greenhouse KWT Bidara.", price: 20000, unit: "kg", stock: 8, status: "PUBLISHED", imageUrl: "", harvestId: "H-CONTOH-1" },
-    { id: "P-ABON", producerId: "PR-PEPAYA", categoryId: "C-PEPAYA", name: "Abon Pepaya", description: "Abon dari pepaya, gurih dan kering.", price: 25000, unit: "bungkus", stock: 21, status: "PUBLISHED", imageUrl: "" },
-    { id: "P-BOLA", producerId: "PR-PEPAYA", categoryId: "C-PEPAYA", name: "Bola-bola Abon Pepaya", description: "Camilan bola-bola berisi abon pepaya.", price: 15000, unit: "bungkus", stock: 15, status: "PUBLISHED", imageUrl: "" },
-    { id: "P-DAUN", producerId: "PR-PEPAYA", categoryId: "C-PEPAYA", name: "Olahan Daun Pepaya", description: "Olahan daun pepaya siap santap.", price: 12000, unit: "bungkus", stock: 4, status: "PUBLISHED", imageUrl: "" },
-    { id: "P-TELANG", producerId: "PR-TELANG", categoryId: "C-TELANG", name: "Bunga Telang Kering", description: "Bunga telang kering untuk diseduh.", price: 18000, unit: "bungkus", stock: 10, status: "PUBLISHED", imageUrl: "" },
-    { id: "P-LAHANG", producerId: "PR-LAHANG", categoryId: "C-MINUM", name: "Lahang", description: "Minuman nira aren.", price: 8000, unit: "botol", stock: 20, status: "DRAFT", imageUrl: "" },
+    { id: "P-PAKCOY", producerId: "PR-KWT", categoryId: "C-HIDRO", name: "Pakcoy Hidroponik", description: "Pakcoy segar dari greenhouse KWT Bidara.", price: 20000, unit: "kg", stock: 8, status: "PUBLISHED", imageUrl: "/produk/pakcoy.svg", harvestId: "H-CONTOH-1" },
+    { id: "P-ABON", producerId: "PR-PEPAYA", categoryId: "C-PEPAYA", name: "Abon Pepaya", description: "Abon dari pepaya, gurih dan kering.", price: 25000, unit: "bungkus", stock: 21, status: "PUBLISHED", imageUrl: "/produk/abon-pepaya.svg" },
+    { id: "P-BOLA", producerId: "PR-PEPAYA", categoryId: "C-PEPAYA", name: "Bola-bola Abon Pepaya", description: "Camilan bola-bola berisi abon pepaya.", price: 15000, unit: "bungkus", stock: 15, status: "PUBLISHED", imageUrl: "/produk/bola-abon.svg" },
+    { id: "P-DAUN", producerId: "PR-PEPAYA", categoryId: "C-PEPAYA", name: "Olahan Daun Pepaya", description: "Olahan daun pepaya siap santap.", price: 12000, unit: "bungkus", stock: 4, status: "PUBLISHED", imageUrl: "/produk/daun-pepaya.svg" },
+    { id: "P-TELANG", producerId: "PR-TELANG", categoryId: "C-TELANG", name: "Bunga Telang Kering", description: "Bunga telang kering untuk diseduh.", price: 18000, unit: "bungkus", stock: 10, status: "PUBLISHED", imageUrl: "/produk/bunga-telang.svg" },
+    { id: "P-LAHANG", producerId: "PR-LAHANG", categoryId: "C-MINUM", name: "Lahang", description: "Minuman nira aren.", price: 8000, unit: "botol", stock: 20, status: "DRAFT", imageUrl: "/produk/lahang.svg" },
   ];
 
   // Stok awal dan penjualan contoh dicatat sebagai pergerakan supaya angka stok bisa ditelusuri.

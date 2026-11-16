@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <title>Ilustrasi lahang dalam lodong bambu dan gelas</title>
+  <defs>
+    <linearGradient id="bambu" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#6f8537"/>
+      <stop offset=".35" stop-color="#a3b85c"/>
+      <stop offset="1" stop-color="#5f752c"/>
+    </linearGradient>
+    <linearGradient id="nira" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fbf4e0"/>
+      <stop offset="1" stop-color="#ead9ad"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="#f4efdc"/>
+  <!-- daun aren di belakang -->
+  <g stroke="#9cb36a" stroke-width="6" stroke-linecap="round" fill="none" opacity=".7">
+    <path d="M560 40C620 120 660 200 690 300"/>
+    <path d="M590 90l60-30M610 130l66-24M628 170l68-16M645 212l66-8M600 110l-40 40M622 150l-44 42M640 192l-44 44"/>
+  </g>
+  <ellipse cx="400" cy="510" rx="300" ry="30" fill="#e3dabf"/>
+
+  <!-- lodong bambu -->
+  <rect x="226" y="100" width="170" height="402" rx="22" fill="url(#bambu)"/>
+  <ellipse cx="311" cy="104" rx="85" ry="16" fill="#c9d68e"/>
+  <ellipse cx="311" cy="104" rx="70" ry="10" fill="#efe3bf"/>
+  <rect x="222" y="232" width="178" height="14" rx="7" fill="#5f752c"/>
+  <rect x="222" y="380" width="178" height="14" rx="7" fill="#5f752c"/>
+  <path d="M258 130v90M258 262v104M258 410v76" stroke="#cbdc93" stroke-width="7" stroke-linecap="round" opacity=".6"/>
+
+  <!-- gelas -->
+  <path d="M446 250h150l-14 252h-122Z" fill="#ffffff" fill-opacity=".6" stroke="#d8cfae" stroke-width="5"/>
+  <path d="M452 300h138l-11 196h-116Z" fill="url(#nira)"/>
+  <ellipse cx="521" cy="300" rx="69" ry="9" fill="#fffaf0"/>
+  <g fill="#ffffff" opacity=".8"><circle cx="490" cy="340" r="5"/><circle cx="540" cy="380" r="4"/><circle cx="510" cy="430" r="5"/><circle cx="560" cy="330" r="3"/></g>
+  <path d="M470 320l-6 150" stroke="#ffffff" stroke-opacity=".6" stroke-width="8" stroke-linecap="round"/>
+</svg>

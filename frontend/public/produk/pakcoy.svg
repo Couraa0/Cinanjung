@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <title>Ilustrasi pakcoy hidroponik</title>
+  <defs>
+    <g id="kepala">
+      <path d="M-250 -30C-230 -100-90-110-20-46L-20-20C-40-10-80 0-120 10-200 30-260 10-250-30Z" fill="#2f7a3e"/>
+      <path d="M-250 30C-230 100-90 110-20 46L-20 20C-40 10-80 0-120-10-200-30-260-10-250 30Z" fill="#3b8a48"/>
+      <path d="M-30 0C-100-52-240-42-258 0-240 42-100 52-30 0Z" fill="#256a33"/>
+      <path d="M-28 0C-100-4-180-2-238 0" stroke="#86b96f" stroke-width="5" stroke-linecap="round" fill="none"/>
+      <path d="M-40 -30C-100-50-170-60-215-40M-40 30C-100 50-170 60-215 40" stroke="#5f9f55" stroke-width="3" stroke-linecap="round" fill="none"/>
+      <path d="M-40-48C40-60 110-30 122 0 110 30 40 60-40 48Z" fill="#eef5df" stroke="#c4d8a6" stroke-width="3"/>
+      <path d="M-34-18C40-24 90-10 118 0M-34 18C40 24 90 10 118 0" stroke="#cfe0b6" stroke-width="3" fill="none"/>
+    </g>
+  </defs>
+  <rect width="800" height="600" fill="#e2eed8"/>
+  <circle cx="670" cy="90" r="150" fill="#d3e6c4"/>
+  <ellipse cx="400" cy="512" rx="310" ry="34" fill="#c3d8b0"/>
+  <rect x="120" y="408" width="560" height="96" rx="44" fill="#b98049"/>
+  <rect x="120" y="400" width="560" height="84" rx="42" fill="#d6a067"/>
+  <circle cx="640" cy="442" r="12" fill="#b98049"/>
+  <use href="#kepala" transform="translate(480 318) rotate(-9)"/>
+  <use href="#kepala" transform="translate(520 392) rotate(4) scale(1.05)"/>
+  <use href="#kepala" transform="translate(452 452) rotate(-2) scale(.92)"/>
+</svg>
