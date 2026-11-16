@@ -14,6 +14,19 @@ npm run build && npm start   # mode produksi; service worker PWA hanya aktif di 
 
 Halaman Masuk menyediakan akun demo untuk kelima peran.
 
+## Environment variable
+
+Salin `.env.example` menjadi `.env.local`. Semua variabel dibaca di satu tempat, `src/lib/env.ts`.
+
+| Variabel | Kegunaan |
+| --- | --- |
+| `NEXT_PUBLIC_SITE_URL` | Alamat publik situs. Di Vercel boleh kosong, alamat produksi dipakai otomatis |
+| `NEXT_PUBLIC_API_URL` | Alamat REST API backend. Belum dipakai selama backend belum ada |
+
+## Deploy ke Vercel
+
+Impor repo di Vercel dan isi **Root Directory** dengan `frontend`. Langkah lengkapnya ada di README di akar repo.
+
 ## Yang masih tiruan
 
 - **Data** disimpan di `localStorage` browser (`src/lib/store.ts`). Tiap browser punya datanya sendiri.

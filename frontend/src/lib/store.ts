@@ -1,7 +1,7 @@
 "use client";
 // ponytail: seluruh data disimpan di localStorage browser ini (belum ada backend).
-// Saat backend siap, ganti getDb/mutate dengan panggilan REST (kontrak di Technical Workflow 7.2);
-// aturan di logic.ts pindah ke server.
+// Saat backend siap, ganti getDb/mutate dengan panggilan REST ke API_URL dari env.ts
+// (kontrak di Technical Workflow 7.2); aturan di logic.ts pindah ke server.
 import { useEffect, useState, useSyncExternalStore, type FormEvent } from "react";
 import { seed } from "./seed";
 import type { Db, User } from "./types";

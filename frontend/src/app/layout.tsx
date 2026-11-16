@@ -2,11 +2,13 @@ import type { Metadata, Viewport } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import { Suspense, type ReactNode } from "react";
 import { ClientGate } from "@/components/client-gate";
+import { SITE_URL } from "@/lib/env";
 import "./globals.css";
 
 const jakarta = Plus_Jakarta_Sans({ variable: "--font-jakarta", subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: "Desa Cinanjung: Smart Garden + Circular Marketplace",
   description:
     "Katalog hasil kebun KWT Bidara dan produk UMKM Desa Cinanjung, dengan pemantauan greenhouse dan pembukuan sederhana.",

@@ -1,0 +1,3 @@
+# Pengaturan alat lokal, tidak ikut ke repo
+.claude/
+.vercel/
