@@ -260,8 +260,8 @@ export function simulateTick(d: Db, deviceId: string, scenario: Scenario, nowMs:
 
 // ---------- Panen: HARVESTED → PENDING_REVIEW → APPROVED → PUBLISHED ----------
 
-// ponytail: gambar ilustrasi bawaan untuk produk dari panen. Hapus saat foto produk asli diunggah lewat backend.
-const CROP_IMAGE: Record<string, string> = { pakcoy: "/produk/pakcoy.svg", selada: "/produk/selada.svg" };
+// ponytail: gambar bawaan untuk produk dari panen. Hapus saat foto produk asli diunggah lewat backend.
+const CROP_IMAGE: Record<string, string> = { pakcoy: "/produk/pakcoy.webp", selada: "/produk/selada.svg" };
 
 export function recordHarvest(
   d: Db,
