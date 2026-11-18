@@ -1,7 +1,8 @@
 # Frontend: Smart Garden + Circular Marketplace Desa Cinanjung
 
 PWA untuk Tim GenAphYah (ACC #NextGreen Leaders Challenge 2026), mengikuti MASTER BLUEPRINT.
-Tahap ini **frontend saja**: belum ada backend, database, atau perangkat ESP32 yang tersambung.
+Tampilan masih memakai data contoh di browser. Skema database (PostgreSQL di Neon) sudah ada, tapi API yang
+menyambungkan tampilan ke database belum dibuat.
 
 ## Menjalankan
 
@@ -22,6 +23,26 @@ Salin `.env.example` menjadi `.env.local`. Semua variabel dibaca di satu tempat,
 | --- | --- |
 | `NEXT_PUBLIC_SITE_URL` | Alamat publik situs. Di Vercel boleh kosong, alamat produksi dipakai otomatis |
 | `NEXT_PUBLIC_API_URL` | Alamat REST API backend. Belum dipakai selama backend belum ada |
+| `DATABASE_URL` | Alamat koneksi PostgreSQL (Neon). Rahasia, hanya dibaca di server (`src/server/db`) |
+
+## Database
+
+PostgreSQL di Neon, diakses lewat Drizzle ORM. Skemanya di `src/server/db/schema.ts`, migrasi SQL di `drizzle/`.
+
+Pertama kali:
+
+1. Buat database Neon (paling mudah dari Vercel: proyek > **Storage** > **Create Database** > Neon).
+2. Salin alamat koneksi *pooled* ke `DATABASE_URL` di `.env.local`.
+3. Jalankan:
+
+```bash
+npm run db:migrate   # membuat semua tabel
+npm run db:seed      # mengisi data contoh (akun demo, produk, pembacaan sensor)
+```
+
+Mengubah skema: edit `schema.ts`, lalu `npm run db:generate` (membuat file migrasi baru) dan `npm run db:migrate`.
+`npm run db:studio` membuka penampil isi database di browser. `npm run db:seed -- --reset` **menghapus semua data**
+lalu mengisi ulang data contoh.
 
 ## Deploy ke Vercel
 
@@ -50,5 +71,8 @@ Impor repo di Vercel dan isi **Root Directory** dengan `frontend`. Langkah lengk
 | `src/app/login` | Halaman masuk |
 | `src/app/dashboard` | Ringkasan, Smart Garden, Marketplace, Admin, Laporan. Menu dan hak akses diatur di `layout.tsx` |
 | `src/lib` | Tipe data, aturan bisnis, data contoh, penyimpanan |
+| `src/server` | Kode khusus server: skema dan koneksi database, hash kata sandi |
+| `drizzle/` | File migrasi SQL (dibuat oleh `npm run db:generate`, jangan diedit manual) |
 | `public/sw.js` | Service worker (halaman yang pernah dibuka tetap tersedia saat offline) |
 | `scripts/check.mts` | Cek aturan bisnis |
+| `scripts/db-seed.mts` | Pengisi data contoh ke database |
