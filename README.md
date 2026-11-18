@@ -5,7 +5,7 @@ Sistem untuk Tim GenAphYah (ACC #NextGreen Leaders Challenge 2026), mengikuti MA
 | Folder | Isi | Status |
 | --- | --- | --- |
 | [`frontend/`](frontend/) | PWA Next.js: katalog, checkout WhatsApp, dashboard Smart Garden, Marketplace, dan Admin | Selesai, masih memakai data contoh |
-| `backend/` | REST API + database | Belum dibuat |
+| `frontend/src/server`, `frontend/drizzle` | Backend: skema database PostgreSQL (Neon) | Skema selesai, API belum dibuat |
 | `firmware/` | Program ESP32 | Belum dibuat |
 
 ## Deploy ke Vercel
